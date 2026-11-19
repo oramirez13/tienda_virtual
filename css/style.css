@@ -1,0 +1,116 @@
+/* -------------------------------------------------------------
+   Barra de navegación (encabezado)
+   ------------------------------------------------------------- */
+
+.navbar-tienda {
+    background-color: #001541;
+}
+
+/* -------------------------------------------------------------
+   Estilos del carrusel de la tienda
+   ------------------------------------------------------------- */
+
+.carrusel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carrusel-diapositiva {
+    display: none;
+}
+
+.carrusel-diapositiva.activa {
+    display: block;
+}
+
+.carrusel-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #001541;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.carrusel-anterior {
+    left: 0;
+}
+
+.carrusel-siguiente {
+    right: 0;
+}
+
+.carrusel-indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carrusel-indicador {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carrusel-indicador::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #cccccc;
+}
+
+.carrusel-indicador.activo::before {
+    background-color: #3273dc;
+}
+
+.carrusel-indicador:focus-visible {
+    outline: 2px solid #3273dc;
+    outline-offset: 1px;
+}
+
+/* -------------------------------------------------------------
+   Imágenes
+   ------------------------------------------------------------- */
+
+/* Mantiene un recorte uniforme sin deformar la imagen. */
+.carrusel-imagen {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imagen-carrito {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.icono-carrito {
+    width: 22px;
+}
+
+.formulario-compra > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.formulario-compra > summary::-webkit-details-marker {
+    display: none;
+}
